@@ -25,22 +25,12 @@
       {% for message in messages %}
 
       <div class="alert alert-success alert-dismissible alert-dismissible-auto fade show" role="alert">
-        {{ message }}
+        {{ message}}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
 
       {% endfor %}
 
-
-
-    <!--  {% for message in messages %}
-
-          <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            {{ message }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
-          
-          {% endfor %} -->
 
       {% endif %}
 
@@ -56,7 +46,7 @@
         alertAuto.forEach(function(element) {
           element.classList.add('hide');
         });
-      }, 3000);
+      }, 6000);
     </script>
     
 

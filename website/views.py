@@ -4,6 +4,8 @@ from django.db.models import Q
 from django.contrib import messages
 from .forms import SignUpForm, AddRecordForm
 from .models import Record
+from django.utils.html import linebreaks
+from django.utils.safestring import mark_safe
 
 
 
@@ -17,7 +19,9 @@ def home(request):
 		user = authenticate(request, username=username, password=password)
 		if user is not None:
 			login(request, user)
-			messages.success(request, "You Have Been Logged In!")
+			full_name = f"{user.first_name} {user.last_name}"  # Concatenate first_name and last_name
+			messages.success(request, f"Welcome, {full_name}. You Have Been Logged In!")
+
 			return redirect('home')
 		else:
 			messages.success(request, "There Was An Error Logging In, Please Try Again...")
@@ -77,19 +81,21 @@ def delete_record(request, pk):
 
 
 def add_record(request):
-	if request.user.is_authenticated:
-		if request.method == "POST":
-			form = AddRecordForm(request.POST)
-			if form.is_valid():
-				add_record = form.save()
-				messages.success(request, "Record Added...")
-				return redirect('home')
-		else:
-			form = AddRecordForm()
-		return render(request, 'add_record.html', {'form': form})
-	else:
-		messages.success(request, "You Must Be Logged In...")
-		return redirect('home')
+    if request.user.is_authenticated:
+        if request.method == "POST":
+            form = AddRecordForm(request.POST)
+            if form.is_valid():
+                record = form.save()
+                full_name = f"{record.first_name} {record.last_name}"  # Concatenate first_name and last_name
+                messages.success(request, f"Record Added for {full_name}")
+                return redirect('home')
+        else:
+            form = AddRecordForm()
+        return render(request, 'add_record.html', {'form': form})
+    else:
+        messages.success(request, "You Must Be Logged In...")
+        return redirect('home')
+
 
 
 
@@ -122,6 +128,7 @@ def search_record(request):
         results = Record.objects.filter(
             Q(city__icontains=query) |  # Search by city (case-insensitive)
             Q(first_name__icontains=query) |  # Search by first_name (case-insensitive)
+	    	Q(last_name__icontains=query) |
             Q(phone__icontains=query)  # Search by phone (case-insensitive)
         )
     else:
