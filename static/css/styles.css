@@ -1,4 +1,43 @@
 .hide {
     display: none;
   }
+
+
+
+
+
+
+#sidebar {
+  background-color: #f8f9fa;
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 1rem;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#sidebar li {
+  padding: 0.5rem 1rem;
+}
+
+#sidebar a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+#sidebar a:hover {
+  background-color: #e5e5e5;
+}
+
+#content {
+  margin-left: 250px; /* To create space for the sidebar */
+}
+
   
