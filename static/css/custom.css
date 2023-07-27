@@ -1,0 +1,15 @@
+/* custom.css */
+
+/* Target the .navbar-brand class within the navbar and apply the margin-right */
+.navbar-brand {
+    margin-right: 90px; /* You can adjust this value as needed */
+  }
+  
+
+
+  /* styles for success messages */
+.message.success {
+    width: 100px; /* Adjust this value as needed */
+    margin-left: 10px; /* Adjust this value as needed */
+  }
+  
