@@ -5,14 +5,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Django CRM</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
-    <link href="{% static 'css/custom.css' %}" rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.15.0/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+    <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.15.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.15.0/font/bootstrap-icons.css" rel="stylesheet">-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 
 
@@ -26,14 +28,14 @@
     
     <div id="sidebar">
       <ul>
-        <li><a href="{% url 'home' %}"><i class="bi bi-house-door"></i> Home</a></li>
-        <li><a href="{% url 'register' %}"><i class="bi bi-person-plus"></i> Register</a></li>
-        <li><a href="{% url 'record' 1 %}"><i class="bi bi-file-earmark-text"></i> Customer Record</a></li>
-        <li><a href="{% url 'delete_record' 1 %}"><i class="bi bi-file-earmark-minus"></i> Delete Record</a></li>
-        <li><a href="{% url 'add_record' %}"><i class="bi bi-file-earmark-plus"></i> Add Record</a></li>
-        <li><a href="{% url 'update_record' 1 %}"><i class="bi bi-file-earmark-check"></i> Update Record</a></li>
+        <li><a href="{% url 'home' %}"><i class="bi bi-house-door-fill"></i> Home</a></li>
+        <li><a href="{% url 'register' %}"><i class="bi bi-person-plus-fill"></i> Register</a></li>
+        <li><a href="{% url 'record' 1 %}"><i class="bi bi-file-earmark-text-fill"></i> Customer Record</a></li>
+        <li><a href="{% url 'delete_record' 1 %}"><i class="bi bi-file-earmark-minus-fill"></i> Delete Record</a></li>
+        <li><a href="{% url 'add_record' %}"><i class="bi bi-file-earmark-plus-fill"></i> Add Record</a></li>
+        <li><a href="{% url 'update_record' 1 %}"><i class="bi bi-file-earmark-check-fill"></i> Update Record</a></li>
         <li><a href="{% url 'search_record' %}"><i class="bi bi-search"></i> Search Record</a></li>
-        <li><a href="{% url 'logout' %}"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+        <li><a href="{% url 'logout' %}"><i class="bi bi-power"></i> Logout</a></li>
       </ul>
     </div>
 
@@ -53,7 +55,7 @@
 
       {% for message in messages %}
 
-      <div class="alert alert-success alert-dismissible alert-dismissible-auto fade show" role="alert">
+      <div class="alert alert-success alert-dismissible alert-dismissible-auto fade show alert-reshape" role="alert">
         {{ message}}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>

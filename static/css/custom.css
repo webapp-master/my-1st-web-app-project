@@ -7,9 +7,10 @@
   
 
 
-  /* styles for success messages */
-.message.success {
-    width: 100px; /* Adjust this value as needed */
-    margin-left: 10px; /* Adjust this value as needed */
-  }
+
   
+
+  .alert-reshape {
+    width: 600px; /* Adjust this value as needed */
+    margin-left: 300px; /* Adjust this value as needed */
+  }

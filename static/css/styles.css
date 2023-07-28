@@ -2,19 +2,19 @@
     display: none;
   }
 
-
+  
 
 
 
 
 #sidebar {
-  background-color: #f8f9fa;
+  background-color: #f2f2f2; #88add2; 
   height: 100%;
   width: 180px;
   position: fixed;
   top: 0;
   left: 0;
-  padding-top: 1rem;
+  padding-top: 5rem;
 }
 
 #sidebar ul {
