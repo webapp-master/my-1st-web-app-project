@@ -25,9 +25,12 @@
   <body>
     
     
-    
-    <div id="sidebar">
+
+    <div id="sidebar"  class="minimized">
+      <!-- Button to toggle sidebar -->
+      <button id="sidebar-toggle-btn" class="btn btn-primary btn-sm"><i class="bi bi-chevron-double-left"></i></button>
       <ul>
+        <!-- Sidebar content with icons -->
         <li><a href="{% url 'home' %}"><i class="bi bi-house-door-fill"></i> Home</a></li>
         <li><a href="{% url 'register' %}"><i class="bi bi-person-plus-fill"></i> Register</a></li>
         <li><a href="{% url 'record' 1 %}"><i class="bi bi-file-earmark-text-fill"></i> Customer Record</a></li>
@@ -68,7 +71,7 @@
 
 
 
-      <div id="content">
+      <div id="content" class="minimized-content"> 
 
 
         {% block content %}
@@ -88,6 +91,21 @@
         });
       }, 6000);
     </script>
+
+
+<script>
+  // Function to toggle the sidebar's state
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const content = document.getElementById('content');
+    sidebar.classList.toggle('minimized');
+    content.classList.toggle('minimized-content');
+  }
+
+  // Add event listener to the toggle button
+  document.getElementById('sidebar-toggle-btn').addEventListener('click', toggleSidebar);
+</script>
+
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>

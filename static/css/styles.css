@@ -8,9 +8,9 @@
 
 
 #sidebar {
-  background-color: #f2f2f2; #88add2; 
+  background-color: #f2f2f2; /*#88add2;*/ 
   height: 100%;
-  width: 180px;
+  width: 100px;
   position: fixed;
   top: 0;
   left: 0;
@@ -36,8 +36,12 @@
   background-color: #e5e5e5;
 }
 
-#content {
+/*#content {
   margin-left: 150px; /* To create space for the sidebar */
-}
+/*}*/
+
 
   
+
+
+ 

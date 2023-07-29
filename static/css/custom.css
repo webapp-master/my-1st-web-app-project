@@ -7,10 +7,44 @@
   
 
 
-
-  
-
   .alert-reshape {
     width: 600px; /* Adjust this value as needed */
     margin-left: 300px; /* Adjust this value as needed */
   }
+
+
+
+ /* Custom styles for the minimized sidebar */
+#sidebar.minimized ul li a {
+  display: none; /* Hides the text content, leaving only the icons visible */
+}
+
+
+#sidebar ul li a i {
+  /* Ensure that the icon is always visible, regardless of the sidebar state */
+  display: none;
+  width: 20px; /* Adjust this value as needed to control the spacing */
+}
+
+
+#sidebar.minimized #sidebar-toggle-btn {
+  /* Adjust the position and style of the toggle button when the sidebar is minimized */
+  position: absolute;
+  top: 0;
+  right: -30px;
+  width: 30px;
+  height: 100%;
+  border-radius: 0;
+}
+
+#content {
+  /* Adjust the content area to make space for the minimized sidebar (when expanded) */
+  margin-left: 100px; /* Adjust this value to control the spacing */
+  transition: margin-left 0.3s;
+}
+
+  /* Styles for the minimized content area */
+#content.minimized-content {
+  /* Adjust the content area to make space for the minimized sidebar (when minimized) */
+  margin-left: 20px; /* Adjust this value to control the spacing */
+}
