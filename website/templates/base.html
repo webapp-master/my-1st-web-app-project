@@ -26,21 +26,7 @@
     
     
 
-    <div id="sidebar"  class="minimized">
-      <!-- Button to toggle sidebar -->
-      <button id="sidebar-toggle-btn" class="btn btn-primary btn-sm"><i class="bi bi-chevron-double-left"></i></button>
-      <ul>
-        <!-- Sidebar content with icons -->
-        <li><a href="{% url 'home' %}"><i class="bi bi-house-door-fill"></i> Home</a></li>
-        <li><a href="{% url 'register' %}"><i class="bi bi-person-plus-fill"></i> Register</a></li>
-        <li><a href="{% url 'record' 1 %}"><i class="bi bi-file-earmark-text-fill"></i> Customer Record</a></li>
-        <li><a href="{% url 'delete_record' 1 %}"><i class="bi bi-file-earmark-minus-fill"></i> Delete Record</a></li>
-        <li><a href="{% url 'add_record' %}"><i class="bi bi-file-earmark-plus-fill"></i> Add Record</a></li>
-        <li><a href="{% url 'update_record' 1 %}"><i class="bi bi-file-earmark-check-fill"></i> Update Record</a></li>
-        <li><a href="{% url 'search_record' %}"><i class="bi bi-search"></i> Search Record</a></li>
-        <li><a href="{% url 'logout' %}"><i class="bi bi-power"></i> Logout</a></li>
-      </ul>
-    </div>
+    
 
     
 
@@ -71,7 +57,7 @@
 
 
 
-      <div id="content" class="minimized-content"> 
+      <div id="content"> 
 
 
         {% block content %}
@@ -93,18 +79,7 @@
     </script>
 
 
-<script>
-  // Function to toggle the sidebar's state
-  function toggleSidebar() {
-    const sidebar = document.getElementById('sidebar');
-    const content = document.getElementById('content');
-    sidebar.classList.toggle('minimized');
-    content.classList.toggle('minimized-content');
-  }
 
-  // Add event listener to the toggle button
-  document.getElementById('sidebar-toggle-btn').addEventListener('click', toggleSidebar);
-</script>
 
     
 
