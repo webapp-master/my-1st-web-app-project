@@ -11,3 +11,57 @@
   width: 600px; /* Adjust this value as needed */
   margin-left: 300px; /* Adjust this value as needed */
 }
+
+
+
+
+
+
+
+/* Sidebar Styles */
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333; /* Sidebar background color */
+  padding-top: 20px;
+  z-index: 1; /* Add a z-index value lower than the navbar's z-index */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 8px;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.sidebar a:hover {
+  background-color: #555; /* Hover color */
+}
+
+/* Navbar Styles */
+.navbar {
+  z-index: 2; /* Add a higher z-index value to the navbar */
+  
+}
+
+/* Adjust the main content to allow space for the sidebar */
+.container {
+  margin-left: 250px; /* Width of the sidebar */
+  padding: 20px;
+}
+
+.navbar-width {
+  width: 1370px;
+}
