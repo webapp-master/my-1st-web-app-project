@@ -9,7 +9,9 @@
 
 .alert-reshape {
   width: 600px; /* Adjust this value as needed */
-  margin-left: 300px; /* Adjust this value as needed */
+  margin-left: 250px; /* Adjust this value as needed */
+  margin-right: 250px;
+  z-index: 3;
 }
 
 
@@ -67,3 +69,22 @@
   position: fixed;
   width: 100%;
 }
+
+
+.outer-div {
+  display: flex;
+  justify-content: center; /* Centers the child div horizontally */
+  align-items: center; /* Centers the child div vertically */
+  /* Additional styling for the outer div */
+  width: 100%;
+  height: 300px; /* Set this to your desired height */
+  background-color: lightgray;
+}
+
+.inner-div {
+  /* Additional styling for the inner div */
+  background-color: white;
+  padding: 20px;
+}
+
+

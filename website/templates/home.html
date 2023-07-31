@@ -51,24 +51,36 @@
 {% else %}
 
 <div class="col-md-6 offset-md-3">
-<h1>Login</h1>
-<br/>
 
-<form method="POST" action="{% url 'home' %}">
-	{% csrf_token %}
-
-  <div class="mb-3">
-    <input type="text" class="form-control" name="username", placeholder="Username" required>
-    
-  </div><br/>
-  <div class="mb-3">
-    <input type="password" class="form-control" name="password", placeholder="Password" required>
+  <div class="login-position-adjust">
+    <h1>Login</h1>
   </div>
+  
+  
   <br/>
-  <button type="submit" class="btn btn-secondary">Login</button>
+  
+  <form method="POST" action="{% url 'home' %}">
+    {% csrf_token %}
+    
+    <div class="mb-3">
+      <input type="text" class="form-control" name="username", placeholder="Username" required>
+    </div>
+    
+    <br/>
+    
+    <div class="mb-3">
+      <input type="password" class="form-control" name="password", placeholder="Password" required>
+    </div>
+    
+    <br/>
+    
+    <div class="login-position-adjust">
+      <button type="submit" class="btn btn-secondary">Login</button>
+    </div>
 
-</form>
+  </form>
 
+</div>
 
 
 {% endif %}
