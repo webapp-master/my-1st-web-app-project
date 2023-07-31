@@ -21,7 +21,7 @@
 /* Sidebar Styles */
 .sidebar {
   height: 100%;
-  width: 150px;
+  width: 120px;
   position: fixed;
   top: 0;
   left: 0;
@@ -58,7 +58,7 @@
 
 /* Adjust the main content to allow space for the sidebar */
 .container {
-  margin-left: 150px; /* Width of the sidebar */
+  margin-left: 120px; /* Width of the sidebar */
   padding: 20px;
 }
 
