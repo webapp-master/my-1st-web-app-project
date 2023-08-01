@@ -4,28 +4,55 @@
 
 
 
-#content {
-  padding-top: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
+
+
+/* Apply flexbox to achieve the desired layout */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f2f2f2;
 }
 
+/* New flex container for the whole page */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the elements horizontally */
+  justify-content: center; /* Centers the elements vertically */
+  margin-left: 120px; /* Width of the sidebar */
+  padding: 20px;
+}
+
+/* Styles for the login form, if needed */
 
 
 
+
+
+/* ... (your existing styles) */
 
 .login-container {
-  max-width: 400px;
-  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
+  background-color: #f2f2f2;
+  width: 650px; /* Increase the width to make the container wider */
+  height: 450px; /* Increase the height to make the container taller */
+  padding: 10px; /* Add padding to increase the visual size */
 }
 
 .login-card {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 20px; /* Increase the padding to add more space around the form */
   text-align: center;
+  width: 90%; /* Use a percentage to make it responsive */
+  
+  margin: 0 auto; /* Center the form horizontally within the container */
 }
 
 h1 {
@@ -55,3 +82,45 @@ h1 {
 .btn-primary:hover {
   background-color: #0056b3;
 }
+
+
+
+
+/* Sidebar Styles */
+.sidebar {
+  height: 100%;
+  width: 120px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  padding-top: 80px;
+  z-index: 1;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 8px;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.sidebar a:hover {
+  background-color: #555;
+}
+
+/* Navbar Styles */
+.navbar {
+  z-index: 2;
+}
+
+/* Add additional styles as needed for other elements */
