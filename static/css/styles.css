@@ -1,11 +1,3 @@
-.hide {
-  display: none;
-}
-
-
-
-
-
 /* Apply flexbox to achieve the desired layout */
 
 body {
@@ -26,21 +18,13 @@ body {
 }
 
 /* Styles for the login form, if needed */
-
-
-
-
-
-/* ... (your existing styles) */
-
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  
   background-color: #f2f2f2;
-  width: 650px; /* Increase the width to make the container wider */
-  height: 450px; /* Increase the height to make the container taller */
+  width: 80%; /* Increase the width to make the container wider */
+  height: 80vh; /* Increase the height to make the container taller */
   padding: 10px; /* Add padding to increase the visual size */
 }
 
@@ -51,7 +35,6 @@ body {
   padding: 20px; /* Increase the padding to add more space around the form */
   text-align: center;
   width: 90%; /* Use a percentage to make it responsive */
-  
   margin: 0 auto; /* Center the form horizontally within the container */
 }
 
@@ -82,9 +65,6 @@ h1 {
 .btn-primary:hover {
   background-color: #0056b3;
 }
-
-
-
 
 /* Sidebar Styles */
 .sidebar {
