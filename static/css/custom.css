@@ -13,3 +13,21 @@
   margin-right: 250px;
   z-index: 3;
 }
+
+
+.result-margin {
+  margin-right: 80px;
+}
+
+
+/* Custom CSS styles for the card */
+.card {
+  width: 31.25rem; /* Adjust this value to your desired width */
+  /* You can also add more styles as needed */
+}
+
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+}
