@@ -137,6 +137,7 @@ h1 {
   background-color: #333;
   padding-top: 80px;
   z-index: 1;
+  
 }
 
 .sidebar ul {
@@ -179,4 +180,19 @@ h1 {
 /* Reduce the margin between <h1> and the form */
 .add-record-container h1 {
   margin-bottom: -15px; /* Adjust this value to reduce the margin */
+}
+
+
+
+
+#sidebar-toggle-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  z-index: 99;
+ 
 }
