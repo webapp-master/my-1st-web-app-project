@@ -134,7 +134,7 @@ h1 {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #333;
+  
   padding-top: 80px;
   z-index: 1;
   
@@ -143,10 +143,11 @@ h1 {
 .sidebar ul {
   list-style-type: none;
   padding: 0;
+  margin-top: 1rem;
 }
 
 .sidebar li {
-  margin-bottom: 8px;
+  margin-bottom: 5rem;
 }
 
 .sidebar a {
@@ -191,8 +192,11 @@ h1 {
   right: 10px;
   background-color: transparent;
   border: none;
-  padding: 5px;
+  padding: 0px;
   cursor: pointer;
-  z-index: 99;
+  z-index: 1;
+  color: #E6E6E6;
+  font-size: 1.5rem;
+  margin-top: 3rem;
  
 }
