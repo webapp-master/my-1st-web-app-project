@@ -130,13 +130,13 @@ h1 {
 /* Sidebar Styles */
 .sidebar {
   height: 100%;
-  width: 120px;
+  width: 120px;   /* Set your desired initial width */
   position: fixed;
   top: 0;
   left: 0;
-  
   padding-top: 80px;
   z-index: 1;
+  transition: width 0.3s ease;
   
 }
 
@@ -199,4 +199,14 @@ h1 {
   font-size: 1.5rem;
   margin-top: 3rem;
  
+}
+
+
+.sidebar-minimized {
+  width: 50px; /* Set your desired minimized width */
+}
+
+
+.hidden-text {
+  display: none;
 }
