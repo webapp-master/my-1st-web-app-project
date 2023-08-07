@@ -15,15 +15,7 @@ body {
   background-color: #f2f2f2;
 }
 
-/* New flex container for the whole page */
-.content-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centers the elements horizontally */
-  justify-content: center; /* Centers the elements vertically */
-  margin-left: 120px; /* Width of the sidebar */
-  padding: 20px;
-}
+
 
 /* Styles for the login form */
 .login-container {
@@ -125,6 +117,16 @@ h1 {
   margin-bottom: 15px;
 }
 
+
+/* New flex container for the whole page */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the elements horizontally */
+  justify-content: center; /* Centers the elements vertically */
+  margin-left: 120px; /* Width of the sidebar */
+  padding: 20px;
+}
 
 
 /* Sidebar Styles */
