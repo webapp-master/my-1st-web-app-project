@@ -1,19 +1,122 @@
-.hide {
-  display: none;
-}
-
-
-
-
-
-/* Apply flexbox to achieve the desired layout */
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   min-height: 100vh;
   background-color: #f2f2f2;
 }
+
+
+.page-container {
+  display: flex;
+}
+
+
+
+/* Navbar Styles */
+.navbar {
+  z-index: 2;
+}
+
+
+.hide {
+  display: none;
+}
+
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the elements horizontally */
+  justify-content: center; /* Centers the elements vertically */
+  
+  padding: 20px;
+  flex: 1; /* Allow the content to occupy the remaining space */
+}
+
+
+/* Sidebar Styles */
+.sidebar {
+  height: 100%;
+  width: 120px;   /* Set your desired initial width */
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 80px;
+  z-index: 1;
+  transition: width 0.3s ease;
+  
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.sidebar li {
+  margin-bottom: 5rem;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.sidebar a:hover {
+  background-color: #555;
+}
+
+
+
+#sidebar-toggle-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  padding: 0px;
+  cursor: pointer;
+  z-index: 1;
+  color: #E6E6E6;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+ 
+}
+
+
+.sidebar-minimized {
+  width: 50px; /* Set your desired minimized width */
+}
+
+
+.hidden-text {
+  display: none;
+}
+
+
+
+
+/* Custom CSS styles for the add-record-container */
+.add-record-container {
+  width: 30rem;
+  max-width: 50rem; /* Adjust this value to your desired width */
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Reduce the margin between <h1> and the form */
+.add-record-container h1 {
+  margin-bottom: -15px; /* Adjust this value to reduce the margin */
+}
+
+
+
+
+/* Apply flexbox to achieve the desired layout */
+
+
 
 
 
@@ -118,97 +221,3 @@ h1 {
 }
 
 
-/* New flex container for the whole page */
-.content-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centers the elements horizontally */
-  justify-content: center; /* Centers the elements vertically */
-  margin-left: 120px; /* Width of the sidebar */
-  padding: 20px;
-}
-
-
-/* Sidebar Styles */
-.sidebar {
-  height: 100%;
-  width: 120px;   /* Set your desired initial width */
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-top: 80px;
-  z-index: 1;
-  transition: width 0.3s ease;
-  
-}
-
-.sidebar ul {
-  list-style-type: none;
-  padding: 0;
-  margin-top: 1rem;
-}
-
-.sidebar li {
-  margin-bottom: 5rem;
-}
-
-.sidebar a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-}
-
-.sidebar a:hover {
-  background-color: #555;
-}
-
-/* Navbar Styles */
-.navbar {
-  z-index: 2;
-}
-
-/* Add additional styles as needed for other elements */
-
-
-
-/* Custom CSS styles for the add-record-container */
-.add-record-container {
-  width: 30rem;
-  max-width: 50rem; /* Adjust this value to your desired width */
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* Reduce the margin between <h1> and the form */
-.add-record-container h1 {
-  margin-bottom: -15px; /* Adjust this value to reduce the margin */
-}
-
-
-
-
-#sidebar-toggle-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: transparent;
-  border: none;
-  padding: 0px;
-  cursor: pointer;
-  z-index: 1;
-  color: #E6E6E6;
-  font-size: 1.5rem;
-  margin-top: 3rem;
- 
-}
-
-
-.sidebar-minimized {
-  width: 50px; /* Set your desired minimized width */
-}
-
-
-.hidden-text {
-  display: none;
-}
