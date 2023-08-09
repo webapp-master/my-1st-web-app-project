@@ -1,106 +1,94 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Django WebApp</title>
-
-
-    <link href="{% static 'css/custom.css' %}" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> 
-    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    
-</head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Django WebApp</title>
 
 
-<body>
-    <!-- Navbar -->
-    {% include 'navbar.html' %}
-    
-
-    <div class="page-container">
-
-
-         <!-- Sidebar -->
-        <aside class="navbar-expand-lg navbar-dark bg-dark sidebar" id="sidebar">
-            {% include 'sidebar.html' %}
-        </aside>
+        <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> 
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        
+    </head>
 
 
-        <div class="content-container">
-            
-            <br/>
-    
-            
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="alert alert-success alert-dismissible alert-dismissible-auto fade show alert-reshape" role="alert">
-                        {{ message}}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                {% endfor %}
-            {% endif %}
+    <body>
+        
+
+        <div class="page-container">
 
 
-            
-                    <div id="content">
-                        {% block content %}
-                        {% endblock %}
+            <!-- Sidebar -->
+            <div class="navbar-dark bg-dark sidebar" id="sidebar">
+                {% include 'sidebar.html' %}
+            </div>
 
-                    </div>
+
+            <div class="content-container">
+                
+                
+
+                
+                        
+                            {% block content %}
+                            {% endblock %}
+
+                        
+
+
+            </div>
+
 
 
         </div>
-
-
-
-    </div>
-    
-
-
-
-    
-
-       
         
-    
+
+
+
         
-    
 
-    
-    <script>
-        setTimeout(function() {
-            var alertAuto = document.querySelectorAll('.alert-dismissible-auto');
-            alertAuto.forEach(function(element) {
-                element.classList.add('hide');
-            });
-        }, 6000);
-    </script>
+        
+            
+        
+            
+        
 
-
-    <script>
-        const sidebar = document.getElementById('sidebar');
-        const sidebarToggleBtn = document.getElementById('sidebar-toggle-btn');
-
-        function toggleSidebar() {
-            sidebar.classList.toggle('sidebar-minimized');
-            // If you have text links inside the sidebar, you can address them here:
-            const sidebarLinks = sidebar.querySelectorAll('li');
-            sidebarLinks.forEach(link => {
-                link.classList.toggle('hidden-text'); // Create a CSS class to hide the text, if needed.
-            });
-        }
-  
-        sidebarToggleBtn.addEventListener('click', toggleSidebar);
-  </script>
+        
+        <script>
+            setTimeout(function() {
+                var alertAuto = document.querySelectorAll('.alert-dismissible-auto');
+                alertAuto.forEach(function(element) {
+                    element.classList.add('hide');
+                });
+            }, 6000);
+        </script>
 
 
+        <script>
+            const sidebar = document.getElementById('sidebar');
+            const sidebarToggleBtn = document.getElementById('sidebar-toggle-btn');
 
-    
+            function toggleSidebar() {
+                sidebar.classList.toggle('sidebar-minimized');
+                // If you have text links inside the sidebar, you can address them here:
+                const sidebarLinks = sidebar.querySelectorAll('li');
+                sidebarLinks.forEach(link => {
+                    link.classList.toggle('hidden-text'); // Create a CSS class to hide the text, if needed.
+                });
+            }
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-</body>
+            sidebarToggleBtn.addEventListener('click', toggleSidebar);
+        </script>
+
+
+
+
+        
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    </body>
 </html>

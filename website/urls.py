@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from website.views import search_record
+from .views import search_record, lab_test
 
 
 urlpatterns = [
@@ -13,5 +13,6 @@ urlpatterns = [
     path('add_record/', views.add_record, name='add_record'),
     path('update_record/<int:pk>', views.update_record, name='update_record'),
     path('search_record/', search_record, name='search_record'),
+    path('lab/', lab_test, name='Labouratory'),
 
 ]

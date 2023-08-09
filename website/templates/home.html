@@ -2,10 +2,7 @@
 
 {% block content %}
 
-
-
 {% if user.is_authenticated %}
-
 
 <table class="table table-striped table-hover table-bordered">
   <thead class="table-dark">
@@ -22,53 +19,21 @@
     </tr>
   </thead>
   <tbody>
-    
-{% if records %}
-	{% for record in records %}
-		<tr>
-			<td>{{ record.first_name }} {{ record.last_name }}</td>
-			<td>{{ record.email }}</td>
-			<td>{{ record.phone }}</td>
-			<td>{{ record.address }}</td>
-			<td>{{ record.city }}</td>
-			<td>{{ record.state }}</td>
-			<td>{{ record.zipcode }}</td>
-			<td>{{ record.created_at }}</td>
-			<td><a href="{% url 'record' record.id %}">{{ record.id }}</a></td>
-		</tr>
-	{% endfor %}
-
-{% endif %}
-
-	
-	  </tbody>
-	</table>
-
-
-
-
-
-{% else %}
-
-<div class="login-container">
-  <div class="login-card">
-    <h1>Login</h1>
-    <form method="POST" action="{% url 'home' %}">
-      {% csrf_token %}
-      <div class="form-group">
-        <input type="text" class="form-control" name="username" placeholder="Username" required>
-      </div>
-      <div class="form-group">
-        <input type="password" class="form-control" name="password" placeholder="Password" required>
-      </div>
-      <button type="submit" class="btn btn-primary">Login</button>
-    </form>
-  </div>
-</div>
-
-
-
-
+    {% for record in records %}
+    <tr>
+      <td>{{ record.first_name }} {{ record.last_name }}</td>
+      <td>{{ record.email }}</td>
+      <td>{{ record.phone }}</td>
+      <td>{{ record.address }}</td>
+      <td>{{ record.city }}</td>
+      <td>{{ record.state }}</td>
+      <td>{{ record.zipcode }}</td>
+      <td>{{ record.created_at }}</td>
+      <td><a href="{% url 'record' record.id %}">{{ record.id }}</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 
 {% endif %}
 

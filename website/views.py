@@ -137,3 +137,8 @@ def search_record(request):
     return render(request, 'search_record.html', {'results': results, 'query': query})
 
 
+def lab_test(request):
+	return render(request, 'lab.html')
+
+
+
