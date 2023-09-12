@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import search_record, lab_test
+from .views import search_record, lab_test, css_flex
 
 
 urlpatterns = [
@@ -14,5 +14,7 @@ urlpatterns = [
     path('update_record/<int:pk>', views.update_record, name='update_record'),
     path('search_record/', search_record, name='search_record'),
     path('lab/', lab_test, name='Labouratory'),
+    path('flex/', css_flex, name='flex_c'),
+
 
 ]

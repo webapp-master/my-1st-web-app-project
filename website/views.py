@@ -141,4 +141,8 @@ def lab_test(request):
 	return render(request, 'lab.html')
 
 
+def css_flex(request):
+	return render(request, 'flex.html')
+
+
 
