@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% block title %}Login Page {% endblock %}
+
+
+<div class="container">
+    <div class="login-box">
+        <!-- Login Form -->
+        <form action="">
+            <h2>Login</h2>
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                <input type="email" required placeholder="Email" />
+            </div>
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                <input type="password" placeholder="Password" required />
+            </div>
+
+            <button type="submit">Login</button>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}
