@@ -1,27 +1,47 @@
-{% extends 'base.html' %}
-{% block content %}
+{% load static %} <!-- Add this line to load the static tag library -->
 
-{% block title %}Login Page {% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <link href="{% static 'css/login_styles.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+   
+</head>
 
 
-<div class="container">
-    <div class="login-box">
-        <!-- Login Form -->
-        <form action="">
-            <h2>Login</h2>
-            <div class="input-box">
-                <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-                <input type="email" required placeholder="Email" />
-            </div>
-            <div class="input-box">
-                <span class="icon"><i class="fa-solid fa-lock"></i></span>
-                <input type="password" placeholder="Password" required />
-            </div>
+<body>
 
-            <button type="submit">Login</button>
+    <div class="container">
+        <div class="login-box">
+            <!-- Login Form -->
+            <form method="POST" action="{% url 'home' %}">
+                {% csrf_token %}
 
-        </form>
+                <h2>Login</h2>
+
+                <div class="input-box">
+                    <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                    <input type="text" class="form-control" name="username" , placeholder="Username" required />
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" class="form-control" name="password" , placeholder="Password" required />
+                </div>
+
+                <button type="submit">Login</button>
+
+                
+            </form>
+        </div>
     </div>
-</div>
 
-{% endblock %}
+
+    
+</body>
+</html>
