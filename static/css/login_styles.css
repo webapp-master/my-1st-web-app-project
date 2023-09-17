@@ -5,6 +5,11 @@
 
 /* General CSS */
 
+
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +17,7 @@
     font-family: "Poppins", sans-serif;
   }
 
+ 
 
 /* Custom CSS */
 .container {
@@ -23,6 +29,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 
@@ -51,6 +58,7 @@
   width: 310px;
   margin: 30px 0;
   border-bottom: 2px solid #fff;
+  
 }
 
 .input-box input {
@@ -60,18 +68,23 @@
   border: none;
   outline: none;
   font-size: 16px;
-  color: #1f73c9;
+  color: #f9f9f9;
   padding: 0 35px 0 5px;
+  border-radius: 9px;
 }
+
+
 
 .input-box input::placeholder {
   color: #f9f9f9;
+  
 }
 
 .input-box .icon {
   position: absolute;
   right: 8px;
-  color: #fff;
+  /*color: #000;*/
+  color: #1f73c9;
   font-size: 18px;
   line-height: 50px;
 }
@@ -106,7 +119,7 @@
 
 .login-box  {
   font-size: 15px;
-  color: #fff;
+  color:#fff;
   text-align: center;
   margin: 20px 0 10px;
 }
@@ -133,3 +146,6 @@
     border: none;
   }
 }
+
+
+

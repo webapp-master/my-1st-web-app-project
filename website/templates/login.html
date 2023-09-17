@@ -10,12 +10,13 @@
     <link href="{% static 'css/login_styles.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
+    
    
 </head>
 
 
 <body>
-
+    {% include 'messages.html' %}
     <div class="container">
         <div class="login-box">
             <!-- Login Form -->
@@ -26,12 +27,12 @@
 
                 <div class="input-box">
                     <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-                    <input type="text" class="form-control" name="username" , placeholder="Username" required />
+                    <input type="text" name="username" , placeholder="Username" required />
                 </div>
 
                 <div class="input-box">
                     <span class="icon"><i class="fa-solid fa-lock"></i></span>
-                    <input type="password" class="form-control" name="password" , placeholder="Password" required />
+                    <input type="password"  name="password" , placeholder="Password" required />
                 </div>
 
                 <button type="submit">Login</button>
