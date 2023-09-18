@@ -6,10 +6,6 @@
 /* General CSS */
 
 
-
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -17,10 +13,12 @@
     font-family: "Poppins", sans-serif;
   }
 
+
+
  
 
 /* Custom CSS */
-.container {
+.container-custom {
     width: 100%;
     height: 100vh;
     background: url('../images/hospital.jpg');
@@ -34,7 +32,7 @@
 
 
 
-.container .login-box {
+.container-custom .login-box {
   position: relative;
   width: 390px;
   height: 420px;
@@ -130,7 +128,7 @@
 
 /* Responsive Design */
 @media (max-width: 460px) {
-  .container .login-box {
+  .container-custom .login-box {
     width: 350px;
   }
 
@@ -140,7 +138,7 @@
 }
 
 @media (max-width: 360px) {
-  .container .login-box {
+  .container-custom .login-box {
     width: 100%;
     height: 100vh;
     border: none;

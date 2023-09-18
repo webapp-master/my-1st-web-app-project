@@ -7,41 +7,41 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-     <title>{% block title %}O.Y.S.H{% endblock %}</title>
+    <title>{% block title %}O.Y.S.H{% endblock %}</title>
 
 
     <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
     <link href="{% static 'css/styles.css' %}" rel="stylesheet">
 
-    
-   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    
+
 
 </head>
 
 
 <body>
 
-     
+
 
 
     <div class="content-container">
-        <br/>
+        <br />
 
         <!-- Rest of the container content goes here -->
         <!-- Including the messages section as well -->
         {% if messages %}
-            {% for message in messages %}
-                <div class="alert alert-success alert-dismissible alert-dismissible-auto fade show alert-reshape" role="alert">
-                    {{ message}}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            {% endfor %}
+        {% for message in messages %}
+        <div class="alert alert-success alert-dismissible alert-dismissible-auto fade show alert-reshape" role="alert">
+            {{ message}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
         {% endif %}
-        
+
         <div id="content">
             {% block content %}
             {% endblock %}
@@ -50,14 +50,17 @@
 
     <!-- Rest of the scripts (e.g., Bootstrap) goes here -->
     <script>
-        setTimeout(function() {
+        setTimeout(function () {
             var alertAuto = document.querySelectorAll('.alert-dismissible-auto');
-            alertAuto.forEach(function(element) {
+            alertAuto.forEach(function (element) {
                 element.classList.add('hide');
             });
         }, 6000);
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
