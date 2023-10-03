@@ -13,10 +13,10 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
 
-     <!--========== BOX ICONS ==========-->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.7/css/boxicons.min.css">
+    <!--========== BOX ICONS ==========-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.7/css/boxicons.min.css">
 
-      <!--========== CSS ==========-->
+    <!--========== CSS ==========-->
     <link rel="stylesheet" href="{% static 'css/dashboard.css' %}" />
 
     <style>
@@ -61,10 +61,6 @@
         .header-logo-custom {
             color: #212529;
         }
-
-       
-
-        
     </style>
 
 </head>
@@ -73,23 +69,21 @@
 
     <!--========== HEADER ==========-->
     <header class="header">
-       
         <img src="{% static 'images/MPP.jpg' %}" alt="" class="header__img" />
-
-
-            <a href="#" class="header__logo header-logo-custom">State Hospital-Oyo </a>
-
-            <div class="header__search">
-                <input type="search" placeholder="Search" class="header__input" />
-                <i class="bx bx-search header__icon"></i>
-            </div>
-
-            <div class="header__toggle">
-                <i class="bx bx-menu" id="header-toggle"></i>
-            </div>
-
-        
+        <a href="#" class="header__logo header-logo-custom">State Hospital-Oyo</a>
+        <div class="header__search">
+            <input type="search" placeholder="Search" class="header__input" />
+            <i class="bx bx-search header__icon"></i>
+        </div>
+        <div class="header__toggle">
+            <i class="bx bx-menu" id="header-toggle"></i>
+        </div>
+        <!-- Display current time and date here -->
+        <div class="header__time-date" id="current-time-date"></div>
     </header>
+
+
+
 
     <div class="container">
         <h1 class="mt-1 text-center post-header">Hospital Management Dashboard</h1>
@@ -313,7 +307,7 @@
 
         </div>
     </div>
-    
+
     <footer class="footer">
         <div class="footer__container">
             <div class="footer__logo">
@@ -332,6 +326,31 @@
             </div>
         </div>
     </footer>
+
+
+    <script>
+        // JavaScript to update current time and date
+        function updateDateTime() {
+            const currentTimeDateElement = document.getElementById("current-time-date");
+            const now = new Date();
+            const options = {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                hour: "numeric",
+                minute: "numeric",
+            };
+            const formattedDateTime = now.toLocaleDateString("en-US", options);
+            currentTimeDateElement.textContent = formattedDateTime;
+        }
+    
+        // Update the time and date every second
+        setInterval(updateDateTime, 1000);
+    
+        // Initial update
+        updateDateTime();
+    </script>
 
 
 </body>
