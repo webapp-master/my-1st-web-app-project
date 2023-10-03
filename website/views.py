@@ -145,4 +145,9 @@ def css_flex(request):
 	return render(request, 'flex.html')
 
 
+def dashboard_page(request):
+	return render(request, 'dashboard.html')
+
+
+
 

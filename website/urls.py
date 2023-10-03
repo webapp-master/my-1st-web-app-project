@@ -15,6 +15,7 @@ urlpatterns = [
     path('search_record/', search_record, name='search_record'),
     path('lab/', lab_test, name='Labouratory'),
     path('flex/', css_flex, name='flex_c'),
+    path('dashboard/', views.dashboard_page, name='dash_page'),
 
 
 ]
