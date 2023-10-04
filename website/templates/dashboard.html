@@ -69,17 +69,16 @@
 
     <!--========== HEADER ==========-->
     <header class="header">
+
         <img src="{% static 'images/MPP.jpg' %}" alt="" class="header__img" />
+
         <a href="#" class="header__logo header-logo-custom">State Hospital-Oyo</a>
-        <div class="header__search">
-            <input type="search" placeholder="Search" class="header__input" />
-            <i class="bx bx-search header__icon"></i>
-        </div>
-        <div class="header__toggle">
-            <i class="bx bx-menu" id="header-toggle"></i>
-        </div>
+
         <!-- Display current time and date here -->
-        <div class="header__time-date" id="current-time-date"></div>
+        <div class="header__time-date" id="current-time-date">
+
+        </div>
+
     </header>
 
 
@@ -344,10 +343,10 @@
             const formattedDateTime = now.toLocaleDateString("en-US", options);
             currentTimeDateElement.textContent = formattedDateTime;
         }
-    
+
         // Update the time and date every second
         setInterval(updateDateTime, 1000);
-    
+
         // Initial update
         updateDateTime();
     </script>
