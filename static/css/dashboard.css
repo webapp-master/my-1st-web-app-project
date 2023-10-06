@@ -80,6 +80,9 @@ img {
   
 }
 
+#current-time-date {
+  margin-left: -5rem;
+}
 
 
 
@@ -273,10 +276,11 @@ img {
 
   .header__img {
     margin-right: 1rem; /* Add margin to create space to the right */
+   
   }
 
   #current-time-date {
-    margin-left: 1rem; /* Add margin to create space to the left */
+    margin-left: 3rem; /* Add margin to create space to the left */
   }
 }
 
