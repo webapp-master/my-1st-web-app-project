@@ -262,12 +262,14 @@ img {
 @media screen and (max-width: 768px) {
   .header {
       display: flex;
-      flex-direction: column; /* Stack elements vertically on small screens */
-      align-items: center; /* Center align items horizontally */
+      flex-direction: row; /* Maintain flex-direction: row; */
+      justify-content: center; /* Center items horizontally */
+      align-items: center; /* Center items vertically */
   }
   
   .header__logo {
-      margin-top: 10px; /* Adjust the margin as needed to control vertical spacing */
+      margin: 0; /* Reset any margin to ensure proper centering */
   }
 }
+
 
